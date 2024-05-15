@@ -1,0 +1,1 @@
+/Users/princess/Development/Concodium/counter/counter-contract/target/concordium/wasm32-unknown-unknown/release/counter_contract.wasm: /Users/princess/Development/Concodium/counter/counter-contract/src/lib.rs
