@@ -26,40 +26,8 @@ pub enum Error {
 /// Init function that creates a new smart contract.
 #[init(contract = "counter_contract")]
 fn init(_ctx: &InitContext, _state_builder: &mut StateBuilder) -> InitResult<State> {
-    // Your code
-    Ok(State {counter: 0})
+    Ok(State { counter: 0 }) // Set initial counter value to 0
 }
-
-
-
-// pub type MyInputType = bool;
-
-// /// Receive function. The input parameter is the boolean variable `throw_error`.
-// ///  If `throw_error == true`, the receive function will throw a custom error.
-// ///  If `throw_error == false`, the receive function executes successfully.
-// #[receive(
-//     contract = "counter_contract",
-//     name = "receive",
-//     parameter = "MyInputType",
-//     error = "Error",
-//     mutable
-// )]
-// fn receive(ctx: &ReceiveContext, _host: &mut Host<State>) -> Result<(), Error> {
-//     // Your code
-
-//     let throw_error = ctx.parameter_cursor().get()?; // Returns Error::ParseError on failure
-//     if throw_error {
-//         Err(Error::YourError)
-//     } else {
-//         Ok(())
-//     }
-// }
-
-// /// View function that returns the content of the state.
-// #[receive(contract = "counter_contract", name = "view", return_value = "State")]
-// fn view<'b>(_ctx: &ReceiveContext, host: &'b Host<State>) -> ReceiveResult<&'b State> {
-//     Ok(host.state())
-// }
 
 type IncrementVal = i8;
 /// Receive function. The input parameter is the increment value `i8`.
